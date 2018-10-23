@@ -13,3 +13,15 @@ select productname, UnitPrice from Products where CategoryID=5
 
 /*mostrar el nombre del producto y su precio para aquellos de la categoria 5 o categoria 7*/
 select productname, UnitPrice from Products where CategoryID=5 or CategoryID=7
+
+select productname, UnitPrice from Products where UnitsInStock>10
+
+select productname, UnitPrice, UnitsInStock from Products where productname = 'tofu'
+
+/*podemos ver la funcion in y que lowercase o uppercase no importa en SQL*/
+select productname, unitprice, unitsinstock from products where Categoryid in (5,7,9)
+
+select productname, unitprice, unitsinstock from products where Categoryid between 1 and 4
+/*lo mismo que*/
+select ProductName, UnitPrice, UnitsInStock from Products where CategoryID >=1 and CategoryID <=4
+
