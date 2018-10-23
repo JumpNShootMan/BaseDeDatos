@@ -1,0 +1,15 @@
+Aplicando Restore Database con un archivo .bak
+
+use NORTHWND
+
+select * from Customers
+
+select companyname, contactname from Customers
+
+select companyname, contactname from Customers where Country='mexico'
+
+/*mostrar el nombre del producto y su precio para aquellos de la categoria 5*/
+select productname, UnitPrice from Products where CategoryID=5
+
+/*mostrar el nombre del producto y su precio para aquellos de la categoria 5 o categoria 7*/
+select productname, UnitPrice from Products where CategoryID=5 or CategoryID=7
