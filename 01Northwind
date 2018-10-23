@@ -25,3 +25,15 @@ select productname, unitprice, unitsinstock from products where Categoryid betwe
 /*lo mismo que*/
 select ProductName, UnitPrice, UnitsInStock from Products where CategoryID >=1 and CategoryID <=4
 
+/*Se utiliza LIKE cuando no se sabe el valor exacto de un dato ||| auto completar %,* para cualquiera cadena de cero o mas caracteres ||| ?,#,_ para cualquier caracter / número único*/
+/* [-] Cualquier carácter único dentro de un rango || [!] Cualquier carácter único que no está dentro de un rango*/
+
+select productname, UnitPrice, UnitsInStock from Products where productname LIKE '_ofu' /*comienza con cualquier letra pero le sigue ofu*/
+select productname, UnitPrice, UnitsInStock from Products where productname LIKE '_________________________%' /*25 caracteres o más*/
+select productname, UnitPrice, UnitsInStock from Products where productname LIKE '[MS]%' /*Comienza con M o S*/
+select productname, UnitPrice, UnitsInStock from Products where productname LIKE '[MS]%[UE]' /*Comienza con M o S y termina con U o E*/
+
+select * from Employees
+
+select FirstName, LastName from Employees where LastName LIKE 'C%'
+select FirstName, LastName from Employees where LastName LIKE '[JN]an%'
