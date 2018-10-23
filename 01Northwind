@@ -37,3 +37,4 @@ select * from Employees
 
 select FirstName, LastName from Employees where LastName LIKE 'C%'
 select FirstName, LastName from Employees where LastName LIKE '[JN]an%'
+select FirstName, LastName from Employees where LastName LIKE '[A-L]'
